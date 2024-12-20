@@ -1,6 +1,35 @@
 # Jest
 This repository contains examples of how to use Jets to test endpoints in a web project.
 
+## Setup
+
+To set up the project for testing, follow these steps:
+
+1. **Install dependencies**:
+   Use the following command to install Jest and Supertest as development dependencies:
+   ```bash
+   npm install --save-dev jest supertest
+   ```
+
+2. **Initialize Jest**:
+   Run this command to initialize Jest in your project:
+   ```bash
+   npm init jest@latest
+   ```
+
+3. **Update `package.json`**:
+   In your `package.json`, ensure you have the following configuration:
+   ```json
+   "scripts": {
+     "start": "node src/index.js",
+     "dev": "nodemon src/index.js",
+     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+   },
+   "type": "module",
+   ```
+
+Now you are ready to start testing your API endpoints using Jest and Supertest.
+
 ## What to Test in API Endpoints
 
 When testing API endpoints, it's important to cover a variety of scenarios to ensure that your application behaves as expected in different situations. Below are key aspects to test for each API endpoint:
